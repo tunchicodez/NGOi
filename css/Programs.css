@@ -1,0 +1,376 @@
+/* PROGRAMS PAGE STYLES */
+
+/* Hero Section */
+.programs-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #2C3E50 0%, #546E7A 100%);
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.programs-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/logo.jpeg') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.hero-overlay-programs {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.hero-content-programs {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge-programs {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-title-programs {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.hero-subtitle-programs {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Programs Stats Section */
+.programs-stats-section {
+  padding: 4rem 0;
+  background: white;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.programs-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-card-programs {
+  background: #F8F9FA;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.stat-card-programs:hover {
+  background: white;
+  border-color: #C41E3A;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
+}
+
+.stat-icon-programs {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #C41E3A, #8B1429);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.stat-icon-programs i {
+  font-size: 1.75rem;
+  color: white;
+}
+
+.stat-number-programs {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label-programs {
+  font-size: 0.9375rem;
+  color: #546E7A;
+  font-weight: 500;
+}
+
+/* Programs Detail Section */
+.programs-detail-section {
+  padding: 6rem 0;
+  background: #F8F9FA;
+}
+
+.program-detail-card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.program-detail-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.program-detail-card.featured {
+  border: 3px solid #C41E3A;
+  position: relative;
+}
+
+.program-detail-card.featured::before {
+  content: 'NEW';
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #C41E3A, #8B1429);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.program-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0;
+}
+
+.program-detail-card.reverse .program-detail-grid {
+  direction: rtl;
+}
+
+.program-detail-card.reverse .program-detail-content {
+  direction: ltr;
+}
+
+.program-detail-image {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.program-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.program-detail-card:hover .program-detail-image img {
+  transform: scale(1.05);
+}
+
+.program-badge-detail {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.program-badge-detail i {
+  font-size: 2rem;
+  color: #C41E3A;
+}
+
+.program-detail-content {
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.program-label {
+  display: inline-block;
+  color: #C41E3A;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.program-detail-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.program-detail-description {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #0d1117;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.program-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item-programs {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+.feature-item-programs i {
+  color: #C41E3A;
+  font-size: 1.125rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.program-stats-inline-detail {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid #F8F9FA;
+  border-bottom: 2px solid #F8F9FA;
+}
+
+.inline-stat-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inline-stat-detail strong {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #C41E3A;
+}
+
+.inline-stat-detail span {
+  font-size: 0.875rem;
+  color: #546E7A;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Programs CTA */
+.programs-cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #2C3E50, #546E7A);
+  text-align: center;
+  color: white;
+}
+
+.programs-cta-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.programs-cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+}
+
+.cta-buttons-programs {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-title-programs {
+    font-size: 2.75rem;
+  }
+  
+  .programs-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .program-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .program-detail-card.reverse .program-detail-grid {
+    direction: ltr;
+  }
+  
+  .program-detail-image {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title-programs {
+    font-size: 2rem;
+  }
+  
+  .programs-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .program-detail-title {
+    font-size: 1.75rem;
+  }
+  
+  .program-detail-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .program-stats-inline-detail {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .programs-cta-content h2 {
+    font-size: 2rem;
+  }
+}

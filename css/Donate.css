@@ -1,0 +1,560 @@
+/* ============================================
+   DONATE PAGE - PROFESSIONAL DESIGN
+   Annor Yeboah Care Foundation
+   ============================================ */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.9), rgba(139, 20, 41, 0.85));
+  z-index: 2;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.btn-large {
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 5rem 0;
+  background-color: var(--color-background-white);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.impact-card {
+  background-color: var(--color-background-white);
+  border: 2px solid var(--color-gray-300);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.impact-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.15);
+}
+
+.impact-card.featured {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border-color: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.impact-card.featured:hover {
+  transform: scale(1.08) translateY(-8px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.4rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.impact-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-background-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: var(--transition-normal);
+}
+
+.impact-card.featured .impact-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.impact-icon i {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.impact-card.featured .impact-icon i {
+  color: white;
+}
+
+.impact-card:hover .impact-icon {
+  transform: scale(1.1);
+}
+
+.impact-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+}
+
+.impact-card.featured .impact-amount {
+  color: white;
+}
+
+.impact-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.impact-card.featured .impact-title {
+  color: white;
+}
+
+.impact-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.impact-card.featured .impact-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Donation Methods Section */
+.donation-methods-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background) 100%);
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.method-card {
+  background-color: var(--color-background-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-normal);
+}
+
+.method-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.method-header {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.method-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.method-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.method-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.method-body {
+  padding: 2rem;
+}
+
+.method-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+.method-detail:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.detail-value {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-align: right;
+  font-size: 1rem;
+}
+
+/* Map & Contact Section */
+.map-contact-section {
+  padding: 5rem 0;
+  background-color: var(--color-background-white);
+}
+
+.map-contact-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 3rem auto 0;
+}
+
+.map-wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 1rem;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info-card {
+  background-color: var(--color-background-alt);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.contact-details h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.contact-details p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Tax Notice Section */
+.tax-notice-section {
+  padding: 3rem 0;
+  background-color: var(--color-background-alt);
+}
+
+.tax-notice-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--color-background-white);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.tax-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tax-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.tax-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-secondary);
+}
+
+.tax-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 5rem 0;
+  background-color: var(--color-background-white);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.faq-item {
+  background-color: var(--color-background-alt);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: var(--transition-normal);
+}
+
+.faq-item:hover {
+  background-color: var(--color-background-white);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.faq-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faq-question i {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.final-cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.final-cta-content .btn {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid white;
+}
+
+.final-cta-content .btn:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .map-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card.featured {
+    transform: scale(1);
+  }
+
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tax-notice-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .final-cta-content p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .impact-amount {
+    font-size: 2rem;
+  }
+
+  .method-body {
+    padding: 1.5rem;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 0.875rem;
+  }
+
+  .contact-info-card {
+    padding: 1.5rem;
+  }
+
+  .tax-notice-card {
+    padding: 1.5rem;
+  }
+
+  .final-cta-content h2 {
+    font-size: 1.75rem;
+  }
+}

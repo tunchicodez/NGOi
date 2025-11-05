@@ -1,0 +1,286 @@
+/* ============================================
+   PROFESSIONAL FOOTER STYLES
+   Annor Yeboah Care Foundation
+   ============================================ */
+
+.footer {
+  background: linear-gradient(135deg, var(--color-secondary-dark) 0%, var(--color-secondary) 100%);
+  color: var(--color-text-white);
+  padding: 4rem 0 0;
+  margin-top: auto;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+}
+
+/* Footer Top - Logo & Tagline */
+.footer-top {
+  text-align: center;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 3rem;
+}
+
+.footer-brand {
+  display: inline-block;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  
+}
+
+.footer-brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-white);
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--color-text-white);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-link::before {
+  content: '\2192';
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: var(--color-primary);
+}
+
+.footer-link:hover {
+  color: var(--color-text-white);
+  padding-left: 20px;
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+/* Footer Contact */
+.footer-contact {
+  margin-bottom: 0;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.footer-contact-item:hover {
+  color: var(--color-text-white);
+  transform: translateX(5px);
+}
+
+.footer-contact-item i {
+  color: var(--color-primary);
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  min-width: 18px;
+}
+
+/* Social Media Section */
+.footer-social-section {
+  text-align: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.footer-social-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-white);
+  margin-bottom: 1.5rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.125rem;
+  border: 2px solid transparent;
+}
+
+.social-icon:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  transform: translateY(-5px) scale(1.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(196, 30, 58, 0.3);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 0;
+  }
+
+  .footer-top {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    width: 60px;
+  }
+
+  .footer-brand-name {
+    font-size: 1.25rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-social-section {
+    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 50px;
+  }
+
+  .footer-brand-name {
+    font-size: 1.125rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-text,
+  .footer-link,
+  .footer-contact-item {
+    font-size: 0.875rem;
+  }
+}

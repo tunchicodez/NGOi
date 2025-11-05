@@ -1,0 +1,748 @@
+/* ============================================
+   GET INVOLVED PAGE - PROFESSIONAL DESIGN
+   Annor Yeboah Care Foundation
+   ============================================ */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.9), rgba(139, 20, 41, 0.85));
+  z-index: 2;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* Ways to Get Involved Section */
+.ways-section {
+  padding: 5rem 0;
+  background-color: var(--color-background-white);
+}
+
+.ways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.way-card {
+  background-color: var(--color-background-white);
+  border: 2px solid var(--color-gray-300);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.way-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.15);
+}
+
+.way-card.featured {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border-color: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.way-card.featured:hover {
+  transform: scale(1.08) translateY(-8px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.4rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.way-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-background-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: var(--transition-normal);
+}
+
+.way-card.featured .way-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.way-icon i {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.way-card.featured .way-icon i {
+  color: white;
+}
+
+.way-card:hover .way-icon {
+  transform: scale(1.1);
+}
+
+.way-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.way-card.featured h3 {
+  color: white;
+}
+
+.way-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.way-card.featured p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.way-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.way-card.featured .way-link {
+  color: white;
+}
+
+.way-link:hover {
+  gap: 0.75rem;
+}
+
+/* Volunteer Section */
+.volunteer-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background) 100%);
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.volunteer-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.lead-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.volunteer-benefits {
+  margin-bottom: 2.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.benefit-item i {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.volunteer-content h3 {
+  font-size: 1.75rem;
+  margin: 2.5rem 0 1.5rem;
+  color: var(--color-secondary);
+}
+
+.opportunities-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.opportunity-item {
+  background-color: var(--color-background-white);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--color-primary);
+}
+
+.opportunity-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.opportunity-item h4 i {
+  color: var(--color-primary);
+}
+
+.opportunity-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.volunteer-image {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.volunteer-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.volunteer-stat {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Partnership Section */
+.partnership-section {
+  padding: 5rem 0;
+  background-color: var(--color-background-white);
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.partnership-card {
+  background-color: var(--color-background-alt);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  transition: var(--transition-normal);
+}
+
+.partnership-card:hover {
+  background-color: var(--color-background-white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.partnership-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.partnership-icon i {
+  font-size: 1.75rem;
+  color: white;
+}
+
+.partnership-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.partnership-card > p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.partnership-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partnership-benefits li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.partnership-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.partnership-cta {
+  text-align: center;
+  max-width: 700px;
+  margin: 4rem auto 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--color-background-alt), var(--color-background));
+  border-radius: 1rem;
+}
+
+.partnership-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.partnership-cta p {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+/* Advocacy Section */
+.advocacy-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-secondary-dark), var(--color-secondary));
+  color: white;
+}
+
+.advocacy-section .section-title,
+.advocacy-section .section-subtitle {
+  color: white;
+}
+
+.advocacy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.advocacy-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition-normal);
+}
+
+.advocacy-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.advocacy-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.advocacy-icon i {
+  font-size: 1.75rem;
+  color: white;
+}
+
+.advocacy-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.advocacy-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-normal);
+}
+
+.social-btn.facebook {
+  background-color: #1877F2;
+  color: white;
+}
+
+.social-btn.twitter {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+  color: white;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 5rem 0;
+  background-color: var(--color-background-white);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.testimonial-card {
+  background-color: var(--color-background-alt);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+  transition: var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  background-color: var(--color-background-white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.quote-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.quote-icon i {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  border-top: 2px solid var(--color-gray-300);
+  padding-top: 1rem;
+}
+
+.author-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.author-role {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.final-cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.final-cta-content .btn {
+  min-width: 200px;
+}
+
+.final-cta-content .btn-primary {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid white;
+}
+
+.final-cta-content .btn-primary:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.final-cta-content .btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.final-cta-content .btn-outline:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-image {
+    order: -1;
+  }
+
+  .volunteer-image img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .ways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .way-card.featured {
+    transform: scale(1);
+  }
+
+  .volunteer-content h2 {
+    font-size: 2rem;
+  }
+
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advocacy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .final-cta-content .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .volunteer-image img {
+    height: 300px;
+  }
+
+  .volunteer-stat {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .social-btn {
+    width: 100%;
+  }
+}

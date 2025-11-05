@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View photos and stories from the Annor Yeboah Care Foundation's programs and community impact.">
+  <title>Gallery - Annor Yeboah Care Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="css/nav.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/Gallery.css" rel="stylesheet">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+  <!-- Navigation Container -->
+  <div id="navigation"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/WhatsApp Image 2025-10-27 at 11.37.06.jpeg" alt="Gallery">
+      <div class="hero-content">
+        <h1 class="hero-title">Our Gallery</h1>
+        <p class="hero-subtitle">
+          Witness the transformative power of compassion through moments captured across our programs and communities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="container-custom">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn" data-filter="education">Education</button>
+          <button class="filter-btn" data-filter="vocational">Vocational Training</button>
+          <button class="filter-btn" data-filter="community">Community</button>
+          <button class="filter-btn" data-filter="events">Events</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="gallery-section">
+      <div class="container-custom">
+        <div class="gallery-grid">
+          <!-- Education Photos -->
+          <div class="gallery-item" data-category="education">
+            <div class="gallery-image-wrapper">
+              <img src="Gallary/WhatsApp Image 2025-10-27 at 11.37.06.jpeg" alt="Educational Support" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>iCare Educational Fund</h3>
+                  <p>Supporting students with scholarships</p>
+                  <button class="view-btn" onclick="openLightbox(0)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="education">
+            <div class="gallery-image-wrapper">
+              <img src="Gallary/WhatsApp Image 2025-10-27 at 11.37.06 (1).jpeg" alt="Students Learning" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Classroom Support</h3>
+                  <p>Providing quality education resources</p>
+                  <button class="view-btn" onclick="openLightbox(1)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vocational Training Photos -->
+          <div class="gallery-item" data-category="vocational">
+            <div class="gallery-image-wrapper">
+              <img src="Gallary/WhatsApp Image 2025-10-27 at 11.37.06 (2).jpeg" alt="Vocational Training" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Skills Development</h3>
+                  <p>Empowering through vocational training</p>
+                  <button class="view-btn" onclick="openLightbox(2)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="vocational">
+            <div class="gallery-image-wrapper">
+              <img src="Gallary/WhatsApp Image 2025-10-27 at 11.37.06 (3).jpeg" alt="Training Workshop" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Workshop Training</h3>
+                  <p>Hands-on skills development</p>
+                  <button class="view-btn" onclick="openLightbox(3)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Community Photos -->
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-image-wrapper">
+              <img src="Gallary/WhatsApp Image 2025-10-27 at 11.37.06 (4).jpeg" alt="Community Outreach" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Community Engagement</h3>
+                  <p>Building stronger communities</p>
+                  <button class="view-btn" onclick="openLightbox(4)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-image-wrapper">
+              <img src="Gallary/WhatsApp Image 2025-10-27 at 11.37.06 (5).jpeg" alt="Community Support" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Support Programs</h3>
+                  <p>Helping families in need</p>
+                  <button class="view-btn" onclick="openLightbox(5)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Events Photos -->
+          <div class="gallery-item" data-category="events">
+            <div class="gallery-image-wrapper">
+              <img src="images/Mr.Annor Yeboah.jpg" alt="Foundation Event" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Annual Celebration</h3>
+                  <p>Honoring our founder's legacy</p>
+                  <button class="view-btn" onclick="openLightbox(6)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="events">
+            <div class="gallery-image-wrapper">
+              <img src="images/logo.jpeg" alt="Fundraising Event" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Fundraising Gala</h3>
+                  <p>Supporting our mission together</p>
+                  <button class="view-btn" onclick="openLightbox(7)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- More mixed category photos -->
+          <div class="gallery-item" data-category="education">
+            <div class="gallery-image-wrapper">
+              <img src="images/WhatsApp Image 2025-10-27 at 11.37.06.jpeg" alt="Scholarship Recipients" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Scholarship Awards</h3>
+                  <p>Celebrating student achievements</p>
+                  <button class="view-btn" onclick="openLightbox(8)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-wrapper">
+          <button class="btn btn-outline btn-large" id="loadMoreBtn">
+            <i class="fas fa-images"></i> Load More Photos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="gallery-stats-section">
+      <div class="container-custom">
+        <div class="stats-grid-gallery">
+          <div class="stat-item-gallery">
+            <div class="stat-icon-gallery">
+              <i class="fas fa-images"></i>
+            </div>
+            <div class="stat-number-gallery"><span class="counter-number" data-target="500">0</span>+</div>
+            <div class="stat-label-gallery">Photos Captured</div>
+          </div>
+
+          <div class="stat-item-gallery">
+            <div class="stat-icon-gallery">
+              <i class="fas fa-calendar"></i>
+            </div>
+            <div class="stat-number-gallery"><span class="counter-number" data-target="50">0</span>+</div>
+            <div class="stat-label-gallery">Events Documented</div>
+          </div>
+
+          <div class="stat-item-gallery">
+            <div class="stat-icon-gallery">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-number-gallery"><span class="counter-number" data-target="1000">0</span>+</div>
+            <div class="stat-label-gallery">Lives Captured</div>
+          </div>
+
+          <div class="stat-item-gallery">
+            <div class="stat-icon-gallery">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="stat-number-gallery"><span class="counter-number" data-target="5">0</span>+</div>
+            <div class="stat-label-gallery">Years of Impact</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gallery-cta-section">
+      <div class="container-custom">
+        <div class="gallery-cta-content">
+          <h2>Want to Be Part of Our Story?</h2>
+          <p>Join us in creating more moments of transformation and hope</p>
+          <div class="cta-buttons">
+            <a href="Donate.html" class="btn btn-primary btn-large">Donate Now</a>
+            <a href="Get involved.html" class="btn btn-outline btn-large">Get Involved</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-prev" onclick="changeSlide(-1)">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-next" onclick="changeSlide(1)">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer Container -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/common.js" defer></script>
+  <script src="js/includes.js" defer></script>
+  <script src="js/counter.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>
