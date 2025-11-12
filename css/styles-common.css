@@ -8,14 +8,14 @@
    ============================================ */
 :root {
   /* Primary Colors - Foundation Red */
-  --color-primary: #FF6F61;           /* Warm Red (primary actions) */
-  --color-primary-dark: #C75B4D;      /* Darker Warm Red */
-  --color-primary-light: #FF9F8A;     /* Lighter/hover warm red */
+  --color-primary: #E53E3E;           /* Stronger Red for better contrast */
+  --color-primary-dark: #C53030;      /* Darker Red */
+  --color-primary-light: #FC8181;     /* Lighter/hover red */
 
   /* Secondary Colors - Blue */
-  --color-secondary: #A4D7E1;         /* Lighter, fresher Blue */
-  --color-secondary-dark: #7FB3C8;    /* Darker blue for contrast */
-  --color-secondary-light: #D1E8E4;   /* Pale Blue for accents */
+  --color-secondary: #2B6CB0;         /* Stronger Blue for better readability */
+  --color-secondary-dark: #2C5282;    /* Darker blue for contrast */
+  --color-secondary-light: #63B3ED;   /* Lighter Blue for accents */
 
   /* Background Colors */
   --color-background: #F0F4F8;        /* Light grayish white */
@@ -23,9 +23,10 @@
   --color-background-white: #FFFFFF;  /* Pure white for surfaces */
 
   /* Text Colors */
-  --color-text: #4A4A4A;              /* Primary text color */
-  --color-text-light: #666666;        /* Muted text */
-  --color-text-lighter: #888888;      /* Lighter muted text */
+  --color-text: #2D3748;              /* Darker primary text color for better contrast */
+  --color-text-light: #4A5568;        /* Darker muted text */
+  --color-text-lighter: #718096;      /* Lighter muted text */
+  --color-text-white: #FFFFFF;        /* White text for dark backgrounds */
 
   /* Gray Scale */
   --color-gray-100: #BDC3C7;
@@ -137,13 +138,16 @@ main {
   background-color: var(--color-primary);
   color: #ffffff;
   border: 2px solid var(--color-primary);
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
-  border-color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(229, 57, 53, 0.25);
+  box-shadow: 0 6px 20px rgba(197, 48, 48, 0.4);
+  color: #ffffff;
 }
 
 .btn-primary:active {
@@ -167,16 +171,20 @@ main {
 
 /* Outline Button */
 .btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn-outline:hover {
-  background-color: var(--color-primary);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(198, 40, 40, 0.25);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+  text-shadow: none;
 }
 
 /* Small Button Variant */
@@ -238,7 +246,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(92, 125, 153, 0.85));
+  background: linear-gradient(135deg, rgba(45, 55, 72, 0.85), rgba(74, 85, 104, 0.8));
   z-index: 2;
 }
 
@@ -267,14 +275,16 @@ main {
   margin-bottom: 1.5rem;
   line-height: 1.2;
   color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  opacity: 0.95;
+  opacity: 1;
   line-height: 1.6;
   color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadeInUp {
