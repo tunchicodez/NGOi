@@ -1,0 +1,95 @@
+VERCEL DEPLOYMENT GUIDE
+=======================
+
+This guide explains how to deploy the Annor Yeboah Care Foundation website to Vercel.
+
+PREPARATION COMPLETED:
+---------------------
+✅ Created vercel.json configuration file
+✅ Updated package.json with proper build script
+✅ Created .vercelignore to exclude unnecessary files
+✅ Verified all static assets are in place
+
+DEPLOYMENT STEPS:
+----------------
+
+1. PREREQUISITES:
+   - Install Vercel CLI: npm i -g vercel
+   - Create a Vercel account at https://vercel.com
+   - Ensure you have Git repository access
+
+2. DEPLOY VIA VERCEL CLI:
+   ```bash
+   # Navigate to project directory
+   cd "c:\Users\Nana Opoku\Downloads\Music\NGO"
+   
+   # Login to Vercel (first time only)
+   vercel login
+   
+   # Deploy the project
+   vercel
+   
+   # Follow the prompts:
+   # - Set up and deploy? [Y/n] Y
+   # - Which scope? (select your account)
+   # - Link to existing project? [y/N] N
+   # - What's your project's name? annor-yeboah-care-foundation
+   # - In which directory is your code located? ./
+   ```
+
+3. DEPLOY VIA VERCEL DASHBOARD:
+   - Go to https://vercel.com/dashboard
+   - Click "New Project"
+   - Import your Git repository
+   - Vercel will auto-detect the configuration
+   - Click "Deploy"
+
+4. CUSTOM DOMAIN (Optional):
+   - In Vercel dashboard, go to your project
+   - Navigate to Settings > Domains
+   - Add your custom domain (e.g., annoryeboahcare.org)
+   - Follow DNS configuration instructions
+
+CONFIGURATION DETAILS:
+---------------------
+
+The vercel.json file includes:
+- Static site build configuration
+- URL routing (/ redirects to /Home.html)
+- Clean URLs (removes .html extension)
+- Security headers (XSS protection, frame options, etc.)
+- Caching rules for static assets
+- 301 redirect from /index.html to /Home.html
+
+IMPORTANT NOTES:
+---------------
+- The site will be deployed as a static site (no server-side rendering)
+- All HTML files are self-contained and don't require server processing
+- Images and assets are optimized for web delivery
+- The custom Node.js server (js/server.js) is excluded from deployment
+- Social media and email links are properly configured
+
+TESTING:
+--------
+After deployment:
+1. Test the main navigation between pages
+2. Verify all images load correctly
+3. Check that contact links (phone/email) work
+4. Test social media links in footer
+5. Ensure responsive design works on mobile
+
+TROUBLESHOOTING:
+---------------
+- If images don't load: Check file paths are relative and case-sensitive
+- If pages return 404: Verify HTML files are in root directory
+- If styles don't apply: Check CSS file paths in HTML files
+- If deployment fails: Check .vercelignore doesn't exclude required files
+
+ENVIRONMENT:
+-----------
+- Node.js version: 18 (as specified in configuration)
+- Build command: Static site (no build process needed)
+- Output directory: Root directory (.)
+- Framework: Static HTML/CSS/JavaScript
+
+For support, refer to Vercel documentation: https://vercel.com/docs

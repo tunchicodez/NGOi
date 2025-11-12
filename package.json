@@ -4,7 +4,8 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
+    "start": "node js/server.js",
+    "build": "echo 'Static site - no build needed'",
     "test": "jest --runInBand"
   },
   "devDependencies": {

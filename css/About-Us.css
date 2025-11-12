@@ -25,7 +25,8 @@
 .hero-overlay {
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(139, 20, 41, 0.9));
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+  opacity: 0.95;
   width: 100%;
   padding: 6rem 0;
 }
@@ -55,6 +56,8 @@
   margin-bottom: 1.5rem;
   color: white;
   line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle-about {
@@ -62,6 +65,8 @@
   line-height: 1.8;
   margin-bottom: 3rem;
   opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 400;
 }
 
 .hero-stats-quick {
