@@ -9,25 +9,21 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/$",
-      "dest": "/Home.html"
+      "source": "/",
+      "destination": "/Home.html"
     },
     {
-      "src": "^/index.html$",
-      "status": 301,
-      "headers": {
-        "Location": "/Home.html"
-      }
-    },
+      "source": "/([^.]+)",
+      "destination": "/$1.html"
+    }
+  ],
+  "redirects": [
     {
-      "src": "^/([^.]+)$",
-      "dest": "/$1.html"
-    },
-    {
-      "src": "^/(.*)$",
-      "dest": "/$1"
+      "source": "/index.html",
+      "destination": "/Home.html",
+      "permanent": true
     }
   ],
   "headers": [
